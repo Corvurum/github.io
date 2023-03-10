@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<script>
+  function randAccess(arr) {
+    return arr.splice([Math.floor(Math.random() * arr.length)], 1)
+  }
+  var arr = ["Колоннада Исаакиевского собора",
+"Пикник на берегу",
+"Таврический сад и его оранжерея",
+"Ботанический сад",
+"Свидание на крыше",
+"Петергоф",
+"Кинотеатр",
+"Музей политической истории России и место смерти Пушкина",
+"Маршрут Достоевского",
+"Маршрут фильма «Брат»",
+"Заброшенная усадьба пос. Торосово",
+"Развод мостов и Белые ночи",
+"Литературный Петербург",
+"Крестовский остров",
+"Сценарий туриста",
+"Шалаш",
+"Солнечное",
+"Выборг",
+"Карелия",
+"Михайловский замок и Марсово поле",
+"Летний сад и Спас-на-Крови",
+"Ладожское озеро",
+"Кронштадт и форты",
+"Дацан",
+"Красный треугольник и Нарвская",
+"Площадь победы и фонтаны",
+"Парк победы и национальная библиотека",
+"Севкабель порт",
+"Актуальная выставка",
+"Дудергофские высоты",
+"Амфитеатр в Гатчине",
+"Свидание на велосипедах",
+"Ораниенбаум"
+  ];
+
+  function getPhrse() {
+    var phrse = randAccess(arr);
+    document.getElementById('replace-me').innerText = phrse;
+  }
+</script>
+<style>
+  p.center-block {
+    margin-left: auto;
+    margin-right: auto;
+    width: 18em;
+    vertical-align: middle;
+    padding-top: 8em;
+    text-align: center;
+  }
+
+  p.text {
+    font-family: Courier New;
+    color: white;
+    text-align: center;
+    font-size: 150%;
+  }
+
+    p.text2 {
+    font-family: Courier New;
+    color: red;
+    text-align: center;
+    font-size: 150%;
+  }
+</style>
+
+<body style="background-color: black;">
+
+
+    <p class="center-block text" >Выбери сегодняшний день</p>
+    <p class="center-block" ><input style="font-size: 110%; font-family: Courier New;  width: 200px; height: 75px" type="button" onclick="getPhrse()" value="Нажми на меня"></p>
+    <p class="center-block text2" id="replace-me"></p>
+
+</body>
+
+</html>
